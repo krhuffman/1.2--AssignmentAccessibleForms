@@ -10,34 +10,39 @@
 </head>
 
 <body>
-    <a href="#skip">Skip to main content</a>
-    <h1>Form Activity - GIT414</h1>
+    <header id="particleBackground">
+        <a href="#skip" id="skipLink">Skip to main content</a>
+        <h1>Form Activity - GIT414</h1>
+    </header>
     <nav>
-        <span>Site Navigation</span>
+        <h2>Site Navigation</h2>
         <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Shop</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
     <main>
-        <h2>Coding Semantic and Accessible Forms!</h2>
-        <p>Today we'll be focusing on coding a form that is accessible and semantic, and we'll also briefly discuss skip
-        links for your website.</p>
-        <p>Forms can be a source of frustration for users, whether they specifically need help with accessing your website
-        or if they just prefer that your forms be easy to use and submit.</p>
-        <p>Follow along as we code this in class, and please ask questions as they arise. Let's make a form!</p>
-        <form>
+        <section id="skip">
+            <h2>Coding Semantic and Accessible Forms!</h2>
+            <p>Today we'll be focusing on coding a form that is accessible and semantic, and we'll also briefly discuss
+                skip links for your website.</p>
+            <p>Forms can be a source of frustration for users, whether they specifically need help with accessing your
+                website or if they just prefer that your forms be easy to use and submit.</p>
+            <p>Follow along as we code this in class, and please ask questions as they arise. Let's make a form!</p>
+        </section>
+
+        <form action="https://wp.zybooks.com/form-viewer.php" method="post">
             <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" required>
-        
+            <input type="text" id="name" name="name" required class="required">
+
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-        
+            <input type="email" id="email" name="email" required class="required">
+
             <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" required>
-        
+            <input type="tel" id="phone" name="phone" required class="required">
+
             <fieldset>
                 <legend>Preferred Contact Method</legend>
                 <label for="phone_prefer">Phone</label>
@@ -45,7 +50,7 @@
                 <label for="email_prefer">Email</label>
                 <input type="radio" id="email_prefer" name="preferred_contact" value="Email">
             </fieldset>
-            
+
             <label for="state">Choose Select State</label>
             <select id="state" name="state">
                 <option value="AL">Alabama</option>
@@ -99,12 +104,12 @@
                 <option value="WI">Wisconsin</option>
                 <option value="WY">Wyoming</option>
             </select>
-        
+
             <label for="comment">Comments</label>
             <textarea id="comment" name="comment" rows="6" required></textarea>
-            
+
             <input type="submit" name="submit">
-        
+
         </form>
     </main>
     <footer>
